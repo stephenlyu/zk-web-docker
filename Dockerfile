@@ -8,6 +8,8 @@ RUN git clone https://github.com/qiuxiafei/zk-web.git \
 
 WORKDIR /zk-web
 
+ADD zk-web.sh /zk-web
+
 EXPOSE 8080
 
-ENTRYPOINT lein run
+ENTRYPOINT /zk-web/zk-web.sh
