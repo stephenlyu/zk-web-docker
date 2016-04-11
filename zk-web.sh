@@ -11,4 +11,5 @@ cat <<EOF > conf/zk-web-conf.clj
 }
 EOF
 
-exec lein run
+export JAVA_OPTS="${JAVA_OPTS:--Xmx192m}"
+exec lein trampoline run
